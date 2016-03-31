@@ -1,4 +1,5 @@
-# Toasty [![CocoaPods](https://img.shields.io/cocoapods/l/Toasty.svg)](https://github.com/isair/Toasty/blob/master/LICENSE) ![CocoaPods](https://img.shields.io/cocoapods/p/Toasty.svg)
+![Toasty](https://i.imgur.com/Ju23p87.png)
+[![CocoaPods](https://img.shields.io/cocoapods/l/Toasty.svg)](https://github.com/isair/Toasty/blob/master/LICENSE) ![CocoaPods](https://img.shields.io/cocoapods/p/Toasty.svg)
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/Toasty.svg)](https://cocoapods.org/pods/Toasty)
 [![Gitter](https://badges.gitter.im/JOINCHAT.svg)](https://gitter.im/isair/Toasty?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
