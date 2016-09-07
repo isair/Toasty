@@ -7,12 +7,13 @@
 
 /**
  TODO:
- - Toast vertical alignment (Top, Center, Bottom).
- - Add width/height FillAvailableArea/FitToText options.
- - Toast horizontal aligment (Left, Center, Right).
+ - Left and right anchoring.
+ - Fit to content option.
+ - Diagonal anchoring.
  - Queue vs show over.
  - OS X support.
  - Show toast with NSAttributedString.
+ - Show toast with markup string.
  */
 
 import Foundation
@@ -25,6 +26,12 @@ import UIKit
 // MARK: - Style Structure
 
 public struct ToastyStyle {
+  public enum Anchor {
+    case top
+    case bottom
+  }
+
+  public var anchor  = Anchor.top
   public var margin  = UIEdgeInsets.zero
   public var padding = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
 
@@ -87,9 +94,14 @@ open class Toasty {
       NSLayoutConstraint(item: messageLabel, attribute: .left, relatedBy: .equal, toItem: toastView, attribute: .left, multiplier: 1, constant: style.padding.left)])
 
     view.addConstraints([
-      NSLayoutConstraint(item: toastView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: style.margin.top),
+      style.anchor == .top
+        ? NSLayoutConstraint(item: toastView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: style.margin.top)
+        : NSLayoutConstraint(item: toastView, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: view, attribute: .top, multiplier: 1, constant: style.margin.top),
       NSLayoutConstraint(item: toastView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: -style.margin.right),
-      NSLayoutConstraint(item: toastView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: style.margin.left)])
+      NSLayoutConstraint(item: toastView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: style.margin.left),
+      style.anchor == .bottom
+        ? NSLayoutConstraint(item: toastView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: -style.margin.bottom)
+        : NSLayoutConstraint(item: toastView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: view, attribute: .bottom, multiplier: 1, constant: -style.margin.bottom)])
 
     // Animate in.
     toastView.alpha = 0
