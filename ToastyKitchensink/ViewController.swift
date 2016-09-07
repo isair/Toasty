@@ -10,7 +10,7 @@ import Toasty
 
 class ViewController: UIViewController {
 
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
     // Make a copy of default style.
