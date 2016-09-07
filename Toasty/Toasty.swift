@@ -30,8 +30,8 @@ public struct ToastyStyle {
     case top
     case bottom
   }
-
   public var anchor  = Anchor.top
+
   public var margin  = UIEdgeInsets.zero
   public var padding = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
 
@@ -40,6 +40,12 @@ public struct ToastyStyle {
 
   public var cornerRadius: CGFloat = 0
 
+  public enum Background {
+    case view
+    case visualEffectView
+  }
+  public var background = Background.view
+
   #if os(OSX)
   public var backgroundColor = NSColor.black.withAlphaComponent(0.8)
   public var textColor = NSColor.white
@@ -47,6 +53,8 @@ public struct ToastyStyle {
   public var backgroundColor = UIColor.black.withAlphaComponent(0.8)
   public var textColor = UIColor.white
   #endif
+
+  public var backgroundVisualEffect: UIVisualEffect = UIBlurEffect(style: .dark)
 
   public var textAlignment = NSTextAlignment.center
 }
@@ -68,8 +76,10 @@ open class Toasty {
   #else
 
   open static func showToastWithText(_ text: String, inView view: UIView, forDuration duration: TimeInterval = Toasty.shortDuration, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
-    let toastView = UIView()
-    toastView.backgroundColor    = style.backgroundColor
+    let toastView = style.background == .view ? UIView() : UIVisualEffectView(effect: style.backgroundVisualEffect)
+    if (style.background == .view) {
+      toastView.backgroundColor    = style.backgroundColor
+    }
     toastView.layer.borderColor  = style.borderColor
     toastView.layer.borderWidth  = style.borderWidth
     toastView.layer.cornerRadius = style.cornerRadius
