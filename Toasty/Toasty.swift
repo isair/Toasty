@@ -7,11 +7,14 @@
 
 /**
  TODO:
+ - Expand for multiline text.
+ - Accessory image.
+ - Tap handler.
+ - Hide method.
  - Left and right anchoring.
- - Fit to content option.
  - Diagonal anchoring.
  - Queue vs show over.
- - OS X support.
+ - Fit width/height to content option.
  - Show toast with NSAttributedString.
  - Show toast with markup string.
  */
@@ -69,15 +72,7 @@ open class Toasty {
   open static let shortDuration: TimeInterval = 2
   open static let longDuration: TimeInterval = 3.5
 
-  #if os(OSX)
-
-  open static func showToastWithText(_ text: String, inView view: NSView, forDuration duration: TimeInterval = Toasty.shortDuration, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
-    assert(false, "Toasty is not yet implemented for OS X")
-  }
-
-  #else
-
-  open static func showToastWithText(_ text: String, inView view: UIView, forDuration duration: TimeInterval = Toasty.shortDuration, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
+  open static func showToastWithText<V: View>(_ text: String, inView view: V, forDuration duration: TimeInterval = Toasty.shortDuration, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
     let toastView = style.background == .view ? UIView() : UIVisualEffectView(effect: style.backgroundVisualEffect)
     if (style.background == .view) {
       toastView.backgroundColor    = style.backgroundColor
@@ -97,7 +92,7 @@ open class Toasty {
     messageLabel.translatesAutoresizingMaskIntoConstraints = false
     toastView.addSubview(messageLabel)
     toastView.translatesAutoresizingMaskIntoConstraints = false
-    view.addSubview(toastView)
+    view.addSubview(toastView as! V)
 
     // Add constraints.
     toastView.addConstraints([
@@ -134,8 +129,6 @@ open class Toasty {
       })
     }
   }
-
-  #endif
 }
 
 // MARK: - View Extensions
@@ -158,4 +151,22 @@ public extension UIView {
   }
 }
 
+#endif
+
+// MARK: - Shared API for UIView and NSView
+
+public protocol View {
+  func addSubview(_ view: Self)
+  func addConstraints(_ constraints: [NSLayoutConstraint])
+  static func animate(withDuration: TimeInterval, animations: @escaping () -> Void)
+}
+
+#if os(OSX)
+
+extension NSView: View {}
+
+#else
+
+extension UIView: View {}
+  
 #endif
