@@ -49,9 +49,11 @@ public struct ToastyStyle {
   #if os(OSX)
   public var backgroundColor = NSColor.black.withAlphaComponent(0.8)
   public var textColor = NSColor.white
+  public var font = NSFont.systemFont(ofSize: NSFont.systemFontSize)
   #else
   public var backgroundColor = UIColor.black.withAlphaComponent(0.8)
   public var textColor = UIColor.white
+  public var font = UIFont.preferredFont(forTextStyle: .body)
   #endif
 
   public var backgroundVisualEffect: UIVisualEffect = UIBlurEffect(style: .dark)
@@ -89,6 +91,7 @@ open class Toasty {
     messageLabel.text          = text
     messageLabel.textColor     = style.textColor
     messageLabel.textAlignment = style.textAlignment
+    messageLabel.font          = style.font
 
     // Add views.
     messageLabel.translatesAutoresizingMaskIntoConstraints = false
