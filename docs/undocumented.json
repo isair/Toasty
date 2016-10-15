@@ -1,0 +1,201 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 31,
+      "symbol": "ToastyStyle",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 32,
+      "symbol": "ToastyStyle.Anchor",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 33,
+      "symbol": "ToastyStyle.Anchor.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 34,
+      "symbol": "ToastyStyle.Anchor.bottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 36,
+      "symbol": "ToastyStyle.anchor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 38,
+      "symbol": "ToastyStyle.margin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 39,
+      "symbol": "ToastyStyle.padding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 41,
+      "symbol": "ToastyStyle.borderWidth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 42,
+      "symbol": "ToastyStyle.borderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 44,
+      "symbol": "ToastyStyle.cornerRadius",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 46,
+      "symbol": "ToastyStyle.Background",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 47,
+      "symbol": "ToastyStyle.Background.view",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 48,
+      "symbol": "ToastyStyle.Background.visualEffectView",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 50,
+      "symbol": "ToastyStyle.background",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 57,
+      "symbol": "ToastyStyle.backgroundColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 58,
+      "symbol": "ToastyStyle.textColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 59,
+      "symbol": "ToastyStyle.font",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 62,
+      "symbol": "ToastyStyle.backgroundVisualEffect",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 64,
+      "symbol": "ToastyStyle.textAlignment",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 66,
+      "symbol": "ToastyStyle.accessoryImageURL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 71,
+      "symbol": "Toasty",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 74,
+      "symbol": "Toasty.Duration",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 104,
+      "symbol": "Toasty.showToastWithText(_:inView:forDuration:usingStyle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 191,
+      "symbol": "UIView.showToastWithText(_:forDuration:usingStyle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 200,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 201,
+      "symbol": "View.addSubview(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 202,
+      "symbol": "View.addConstraints(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Isair/Projects/isair/Toasty/Toasty/Toasty.swift",
+      "line": 203,
+      "symbol": "View.animate(withDuration:animations:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Isair/Projects/isair/Toasty"
+}

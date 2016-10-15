@@ -5,7 +5,7 @@
 //  Copyright © 2016 Baris Sencan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 //! Project version number for Toasty.
 FOUNDATION_EXPORT double ToastyVersionNumber;

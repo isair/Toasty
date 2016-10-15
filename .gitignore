@@ -1,6 +1,16 @@
+# General
+#
+*.swp
+
 # OSX
 #
 .DS_Store
+Iconr
+Icon?
+
+## Windows
+#
+desktop.ini
 
 # Xcode
 #
@@ -21,3 +31,8 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+
+# bundler
+.bundle
+vendor/bundle/
+vendor/ruby/

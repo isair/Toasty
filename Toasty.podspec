@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Toasty'
-  s.version = '0.1.1'
+  s.version = '0.2.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'App extension compatible Toast library for iOS, tvOS, and OS X.'
 
@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
+  s.osx.deployment_target = '10.9'
   s.source       = { :git => 'https://github.com/isair/Toasty.git', :tag => s.version }
   s.source_files = 'Toasty'
 end
