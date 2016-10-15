@@ -99,7 +99,7 @@ open class Toasty {
 
   // MARK: Methods
 
-  open class func showToastWithText<V: View>(_ text: String, inView view: V, forDuration duration: Duration = .short, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
+  open class func showToast<V: View>(with text: String, inView view: V, forDuration duration: Duration = .short, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
     let toastView = style.background == .view ? UIView() : UIVisualEffectView(effect: style.backgroundVisualEffect)
     if (style.background == .view) {
       toastView.backgroundColor    = style.backgroundColor
@@ -177,8 +177,8 @@ open class Toasty {
 
 public extension NSView {
 
-  public func showToastWithText(_ text: String, forDuration duration: Toasty.Duration = .short, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
-    Toasty.showToastWithText(text, inView: self, forDuration: duration, usingStyle: style)
+  public func showToast(with text: String, forDuration duration: Toasty.Duration = .short, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
+    Toasty.showToast(with: text, inView: self, forDuration: duration, usingStyle: style)
   }
 }
 
@@ -186,8 +186,8 @@ public extension NSView {
 
 public extension UIView {
 
-  public func showToastWithText(_ text: String, forDuration duration: Toasty.Duration = .short, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
-    Toasty.showToastWithText(text, inView: self, forDuration: duration, usingStyle: style)
+  public func showToast(with text: String, forDuration duration: Toasty.Duration = .short, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
+    Toasty.showToast(with: text, inView: self, forDuration: duration, usingStyle: style)
   }
 }
 

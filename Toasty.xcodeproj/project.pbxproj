@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FDD1C681DB1BF82003143AA /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDD1C671DB1BF82003143AA /* ExampleCell.swift */; };
 		5FED88401CAC868000EF50C4 /* Toasty.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FED883F1CAC868000EF50C4 /* Toasty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FED88741CAC87A500EF50C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FED88731CAC87A500EF50C4 /* AppDelegate.swift */; };
-		5FED88761CAC87A500EF50C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FED88751CAC87A500EF50C4 /* ViewController.swift */; };
+		5FED88761CAC87A500EF50C4 /* KitchensinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FED88751CAC87A500EF50C4 /* KitchensinkViewController.swift */; };
 		5FED88791CAC87A500EF50C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FED88771CAC87A500EF50C4 /* Main.storyboard */; };
 		5FED887B1CAC87A500EF50C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FED887A1CAC87A500EF50C4 /* Assets.xcassets */; };
 		5FED887E1CAC87A500EF50C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FED887C1CAC87A500EF50C4 /* LaunchScreen.storyboard */; };
@@ -51,12 +52,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5FDD1C671DB1BF82003143AA /* ExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		5FED883C1CAC868000EF50C4 /* Toasty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toasty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FED883F1CAC868000EF50C4 /* Toasty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Toasty.h; sourceTree = "<group>"; };
 		5FED88411CAC868000EF50C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FED88711CAC87A500EF50C4 /* ToastyKitchensink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToastyKitchensink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FED88731CAC87A500EF50C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5FED88751CAC87A500EF50C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5FED88751CAC87A500EF50C4 /* KitchensinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchensinkViewController.swift; sourceTree = "<group>"; };
 		5FED88781CAC87A500EF50C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FED887A1CAC87A500EF50C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FED887D1CAC87A500EF50C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -129,7 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				5FED88731CAC87A500EF50C4 /* AppDelegate.swift */,
-				5FED88751CAC87A500EF50C4 /* ViewController.swift */,
+				5FED88751CAC87A500EF50C4 /* KitchensinkViewController.swift */,
+				5FDD1C671DB1BF82003143AA /* ExampleCell.swift */,
 				5FED88771CAC87A500EF50C4 /* Main.storyboard */,
 				5FED887A1CAC87A500EF50C4 /* Assets.xcassets */,
 				5FED887C1CAC87A500EF50C4 /* LaunchScreen.storyboard */,
@@ -301,7 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FED88761CAC87A500EF50C4 /* ViewController.swift in Sources */,
+				5FDD1C681DB1BF82003143AA /* ExampleCell.swift in Sources */,
+				5FED88761CAC87A500EF50C4 /* KitchensinkViewController.swift in Sources */,
 				5FED88741CAC87A500EF50C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
