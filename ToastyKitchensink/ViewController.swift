@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     style.background = .visualEffectView
 
     // Show our toast.
-    view.showToastWithText("Hello, world!", usingStyle: style)
+    view.showToastWithText("Hello, world!", forDuration: .dynamic(readSpeed: nil), usingStyle: style)
   }
 }
 

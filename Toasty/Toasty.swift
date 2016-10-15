@@ -67,12 +67,39 @@ public struct ToastyStyle {
 // MARK: - Main Functionality
 
 open class Toasty {
-  open static var defaultStyle = ToastyStyle()
+  // MARK: Types
 
-  open static let shortDuration: TimeInterval = 2
-  open static let longDuration: TimeInterval = 3.5
+  public enum Duration {
+    /// 2 seconds.
+    case short
 
-  open static func showToastWithText<V: View>(_ text: String, inView view: V, forDuration duration: TimeInterval = Toasty.shortDuration, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
+    /// 3.5 seconds.
+    case long
+
+    /// Custom defined duration.
+    case custom(customDurationTime: TimeInterval)
+
+    /// Duration is calculated from toast text
+    /// length and the read speed provided here.
+    ///
+    /// Read speed format is characters per
+    /// second. If nil, the default value of 8
+    /// is used.
+    case dynamic(readSpeed: Double?)
+  }
+
+  // MARK: Properties
+
+  /// The default style configuration. Mutable. Changes
+  /// only affect the toasts shown after their assignment.
+  public static var defaultStyle = ToastyStyle()
+
+  private static let shortDuration: TimeInterval = 2
+  private static let longDuration: TimeInterval = 3.5
+
+  // MARK: Methods
+
+  open class func showToastWithText<V: View>(_ text: String, inView view: V, forDuration duration: Duration = .short, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
     let toastView = style.background == .view ? UIView() : UIVisualEffectView(effect: style.backgroundVisualEffect)
     if (style.background == .view) {
       toastView.backgroundColor    = style.backgroundColor
@@ -117,8 +144,21 @@ open class Toasty {
       toastView.alpha = 1
     }
 
+    // Calculate duration.
+    var durationTime: TimeInterval!
+    switch duration {
+    case .short:
+      durationTime = shortDuration
+    case .long:
+      durationTime = longDuration
+    case .custom(let customDurationTime):
+      durationTime = customDurationTime
+    case .dynamic(let readSpeed):
+      durationTime = Double(text.characters.count) / (readSpeed ?? 8.0)
+    }
+
     // Wait for duration and animate out.
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + durationTime) {
       UIView.animate(
         withDuration: 0.2,
         animations: { [weak toastView] in
@@ -137,7 +177,7 @@ open class Toasty {
 
 public extension NSView {
 
-  public func showToastWithText(_ text: String, forDuration duration: TimeInterval = Toasty.shortDuration, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
+  public func showToastWithText(_ text: String, forDuration duration: Toasty.Duration = .short, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
     Toasty.showToastWithText(text, inView: self, forDuration: duration, usingStyle: style)
   }
 }
@@ -146,7 +186,7 @@ public extension NSView {
 
 public extension UIView {
 
-  public func showToastWithText(_ text: String, forDuration duration: TimeInterval = Toasty.shortDuration, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
+  public func showToastWithText(_ text: String, forDuration duration: Toasty.Duration = .short, usingStyle style: ToastyStyle = Toasty.defaultStyle) {
     Toasty.showToastWithText(text, inView: self, forDuration: duration, usingStyle: style)
   }
 }
