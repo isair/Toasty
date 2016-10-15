@@ -7,7 +7,6 @@
 
 /**
  TODO:
- - Expand for multiline text.
  - Accessory image.
  - Tap handler.
  - Hide method.
@@ -110,6 +109,7 @@ open class Toasty {
     toastView.layer.zPosition    = 1000
 
     let messageLabel = UILabel()
+    messageLabel.numberOfLines = 0
     messageLabel.text          = text
     messageLabel.textColor     = style.textColor
     messageLabel.textAlignment = style.textAlignment
