@@ -217,7 +217,7 @@ public protocol View: class {
 
   var alpha: CGFloat { get set }
   var wantsLayer: Bool { get set }
-  var layer: CALayer { get }
+  var layer: CALayer! { get }
   var translatesAutoresizingMaskIntoConstraints: Bool { get set }
 
   init()
