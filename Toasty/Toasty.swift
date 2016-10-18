@@ -35,7 +35,7 @@ public struct ToastyStyle {
   public var anchor  = Anchor.top
 
   #if os(OSX)
-    public var margin  = EdgeInsets.zero
+    public var margin  = EdgeInsets()
     public var padding = EdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
   #else
     public var margin  = UIEdgeInsets.zero
