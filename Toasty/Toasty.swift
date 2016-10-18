@@ -35,8 +35,8 @@ public struct ToastyStyle {
   public var anchor  = Anchor.top
 
   #if os(OSX)
-    public var margin  = NSEdgeInsets.zero
-    public var padding = NSEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    public var margin  = EdgeInsets.zero
+    public var padding = EdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
   #else
     public var margin  = UIEdgeInsets.zero
     public var padding = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
@@ -56,7 +56,7 @@ public struct ToastyStyle {
   #if os(OSX)
     public var backgroundColor = NSColor.black.withAlphaComponent(0.8)
     public var textColor = NSColor.white
-    public var font = NSFont.systemFont(ofSize: NSFont.systemFontSize)
+    public var font = NSFont.systemFont(ofSize: NSFont.systemFontSize())
   #else
     public var backgroundColor = UIColor.black.withAlphaComponent(0.8)
     public var backgroundVisualEffect: UIVisualEffect = UIBlurEffect(style: .dark)
