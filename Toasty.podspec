@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Toasty'
-  s.version = '0.2.0'
+  s.version = '0.2.1'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'App extension compatible Toast library for iOS, tvOS, and OS X.'
 
